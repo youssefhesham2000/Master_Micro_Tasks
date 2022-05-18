@@ -61,7 +61,7 @@ def substitute(function,x):
     try:
         val = eval(function, {"x": x})
         return val
-    except (SyntaxError, NameError):
+    except (SyntaxError, NameError, ZeroDivisionError):
         return None
 
 
